@@ -88,7 +88,7 @@ const Signin = () => {
                     </form>
                 
                 <div className='pageLink'>
-                  <Link to='/signup' className='nav'>
+                  <Link to='/' className='nav'>
                     <h4 className='signinlink'>New to Arise?</h4><span className='span'>Create an account</span>
                   </Link>
                 </div>
