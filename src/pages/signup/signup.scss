@@ -1,0 +1,108 @@
+.signupcontainer {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 592.04px;
+        margin: 0 auto;
+        width: 360px;
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            .getStarted {
+                margin-top: 24px;
+            }
+
+            .logo {
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+        .content {
+            margin-top: 32px;
+
+            .borderline {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 35px;
+    
+                .line {
+                    border-bottom: 1px solid #E2E8F3;
+                    width: 153px;
+                }
+    
+                .divider {
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    color: #667085;
+                    text-transform: uppercase;
+                    font-family: 'Graphik';
+                }
+            }
+    
+    
+            form {
+                width: 100%;
+    
+                .namefields {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                }
+                
+                .emailerror {
+                    color: #7E8FB5;
+                    font-size: 14px;
+                    font-weight: 400;
+                    font-family: 'Graphik';
+
+                }
+
+                .passworderror {
+                    font-size: 14px;
+                    color: #F04438;
+                    font-weight: 400;
+                    font-family: 'Graphik';
+                }
+    
+            }
+
+        }
+
+        
+ 
+    }
+
+    .links {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .signinlink {
+        display: flex;
+        align-items: center;
+        margin-top: 24.04px;
+        gap: 4px;
+        justify-content: center;
+
+        span {
+            font-size: 14px;
+            font-weight: 500;
+            color: #1C64F2;
+        }
+    }
+}
