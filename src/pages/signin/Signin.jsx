@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import google from '../../images/GoogleIcon.svg';
 import FieldB from '../../components/formfield/FieldB';
 import Button from '../../components/button/Button';
-import Links from '../../components/pagelink/Links';
 import { useForm } from "react-hook-form";
 import err from '../../images/errorIcon.svg'
 import { useState } from 'react';
@@ -87,11 +86,12 @@ const Signin = () => {
                             onClick={errors.password && errIcon}
                         />
                     </form>
-
-                  <Links 
-                    text='New to Arise?'
-                    span='Create an account'
-                  />
+                
+                <div className='pageLink'>
+                  <Link to='/signup' className='nav'>
+                    <h4 className='signinlink'>New to Arise?</h4><span className='span'>Create an account</span>
+                  </Link>
+                </div>
                 </div>
             </main>
         </div>

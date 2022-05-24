@@ -92,17 +92,49 @@
         cursor: pointer;
     }
 
-    .signinlink {
+    .pageLink {
         display: flex;
+        width: 100%;
         align-items: center;
-        margin-top: 24.04px;
-        gap: 4px;
         justify-content: center;
 
-        span {
+        .nav {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            gap: 4px;
+            margin-top: 24.04px;
+
+            .signinlink {
             font-size: 14px;
-            font-weight: 500;
-            color: #1C64F2;
+            font-weight: 400;
+            font-family: 'Graphik';
+            color: #667085;
+            }
+
+            .span {
+                font-size: 14px;
+                font-weight: 500;
+                color: #1C64F2;
+            }
         }
+
+       
     }
+
+    // .signinlink {
+    //     display: flex;
+    //     align-items: center;
+    //     margin-top: 24.04px;
+    //     gap: 4px;
+    //     justify-content: center;
+
+    //     span {
+    //         font-size: 14px;
+    //         font-weight: 500;
+    //         color: #1C64F2;
+    //     }
+    // }
 }
