@@ -1,15 +1,105 @@
-.actionButton {
-    margin-top: 24px;
-    height: 40px;
-    background-color: #1C64F2;
-    width: 359px;
-    border-radius: 122px;
-    border: none;
-    color: #FFFFFF;
-    font-size: 14px;
-    text-align: center;
-    font-weight: 500;
-    line-height: 32px;
-    cursor: pointer;
-    font-family: 'Graphik';
+@media (max-width: 320px) {
+    .actionButton {
+        margin-top: 8px;
+        height: 40px;
+        background-color: #1C64F2;
+        width: 100%;
+        border-radius: 122px;
+        border: none;
+        color: #FFFFFF;
+        font-size: 14px;
+        text-align: center;
+        font-weight: 500;
+        line-height: 32px;
+        cursor: pointer;
+        font-family: 'Graphik';
+    }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+    .actionButton {
+        margin-top: 8px;
+        height: 40px;
+        background-color: #1C64F2;
+        width: 100%;
+        border-radius: 122px;
+        border: none;
+        color: #FFFFFF;
+        font-size: 14px;
+        text-align: center;
+        font-weight: 500;
+        line-height: 32px;
+        cursor: pointer;
+        font-family: 'Graphik';
+    }
+}
+@media (min-width: 481px) and (max-width: 720px) {
+    .actionButton {
+        margin-top: 8px;
+        height: 40px;
+        background-color: #1C64F2;
+        width: 100%;
+        border-radius: 122px;
+        border: none;
+        color: #FFFFFF;
+        font-size: 14px;
+        text-align: center;
+        font-weight: 500;
+        line-height: 32px;
+        cursor: pointer;
+        font-family: 'Graphik';
+    }
+}
+
+@media (min-width: 721px) and (max-width: 1024px) {
+    .actionButton {
+        margin-top: 8px;
+        height: 40px;
+        background-color: #1C64F2;
+        width: 100%;
+        border-radius: 122px;
+        border: none;
+        color: #FFFFFF;
+        font-size: 14px;
+        text-align: center;
+        font-weight: 500;
+        line-height: 32px;
+        cursor: pointer;
+        font-family: 'Graphik';
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+    .actionButton {
+        margin-top: 8px;
+        height: 40px;
+        background-color: #1C64F2;
+        width: 100%;
+        border-radius: 122px;
+        border: none;
+        color: #FFFFFF;
+        font-size: 14px;
+        text-align: center;
+        font-weight: 500;
+        line-height: 32px;
+        cursor: pointer;
+        font-family: 'Graphik';
+    }
+}
+
+@media (min-width: 1200px) {
+    .actionButton {
+        margin-top: 24px;
+        height: 40px;
+        background-color: #1C64F2;
+        width: 359px;
+        border-radius: 122px;
+        border: none;
+        color: #FFFFFF;
+        font-size: 14px;
+        text-align: center;
+        font-weight: 500;
+        line-height: 32px;
+        cursor: pointer;
+        font-family: 'Graphik';
+    }
 }

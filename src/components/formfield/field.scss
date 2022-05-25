@@ -1,6 +1,227 @@
+@media (max-width: 320px) {
+    .smallfieldcontainer {
+        margin-top: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        .namefield {
+            width: 100%;
+            font-size: 14px;
+            font-family: 'Graphik';
+            font-weight: 400;
+            color: #4B5563;
+            margin: 0 auto;
+            height: 36px;
+        }
+
+    }
+    
+    .bigcontainer {
+        // height: 62px;
+        margin: 12px 0 8px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        .email__password {
+            width: 100%;
+            font-size: 14px;
+            font-family: 'Graphik';
+            font-weight: 400;
+            color: #4B5563;
+            margin-top: 8px;
+        } 
+            label {
+                line-height: 18px;
+            }
+        }
+    label {
+        line-height: 18px;
+    }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+    .smallfieldcontainer {
+        margin-top: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        .namefield {
+            width: 100%;
+            font-size: 14px;
+            font-family: 'Graphik';
+            font-weight: 400;
+            color: #4B5563;
+            margin: 0 auto;
+            height: 36px;
+        }
+
+    }
+    
+    .bigcontainer {
+        // height: 62px;
+        margin: 12px 0 8px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        .email__password {
+            width: 100%;
+            font-size: 14px;
+            font-family: 'Graphik';
+            font-weight: 400;
+            color: #4B5563;
+            margin-top: 8px;
+        } 
+            label {
+                line-height: 18px;
+            }
+        }
+    label {
+        line-height: 18px;
+    }
+}
+ 
+@media (min-width: 481px) and (max-width: 720px) {
+    .smallfieldcontainer {
+        margin-top: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+
+        .namefield {
+            width: 100%;
+            font-size: 14px;
+            font-family: 'Graphik';
+            font-weight: 400;
+            color: #4B5563;
+            margin: 0 auto;
+            height: 36px;
+        }
+
+    }
+    
+    .bigcontainer {
+        // height: 62px;
+        margin: 12px 0 8px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        .email__password {
+            width: 100%;
+            font-size: 14px;
+            font-family: 'Graphik';
+            font-weight: 400;
+            color: #4B5563;
+            margin-top: 8px;
+        } 
+            label {
+                line-height: 18px;
+            }
+        }
+    label {
+        line-height: 18px;
+    }
+}
+
+@media (min-width: 721px) and (max-width: 1024px) {
+    .smallfieldcontainer {
+        margin-top: 8px;
+        display: flex;
+        flex-direction: column;
+
+        .namefield {
+            width: 95%;
+            font-size: 14px;
+            font-family: 'Graphik';
+            font-weight: 400;
+            color: #4B5563;
+            // margin: 0 auto;
+            height: 36px;
+        }
+
+    }
+    
+    .bigcontainer {
+        // height: 62px;
+        margin: 12px 0 8px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        .email__password {
+            width: 100%;
+            font-size: 14px;
+            font-family: 'Graphik';
+            font-weight: 400;
+            color: #4B5563;
+            margin-top: 8px;
+        } 
+            label {
+                line-height: 18px;
+            }
+        }
+    label {
+        line-height: 18px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+    .smallfieldcontainer {
+        margin-top: 8px;
+        display: flex;
+        flex-direction: column;
+
+        .namefield {
+            width: 95%;
+            font-size: 14px;
+            font-family: 'Graphik';
+            font-weight: 400;
+            color: #4B5563;
+            // margin: 0 auto;
+            height: 36px;
+        }
+
+    }
+    
+    .bigcontainer {
+        // height: 62px;
+        margin: 12px 0 8px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        .email__password {
+            width: 100%;
+            font-size: 14px;
+            font-family: 'Graphik';
+            font-weight: 400;
+            color: #4B5563;
+            margin-top: 8px;
+        } 
+            label {
+                line-height: 18px;
+            }
+        }
+    label {
+        line-height: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
 .smallfieldcontainer {
     height: 62px;
-    // margin-top: 37px;
     
     .namefield {
         width: 175px;
@@ -22,7 +243,6 @@
         font-weight: 400;
         color: #4B5563;
     }
-
-   
 }
 
+}

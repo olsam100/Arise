@@ -1,16 +1,111 @@
-.button {
-    display: flex;
-    width: 360px;
-    justify-content: center;
-    border-radius: 41px;
-    height: 44px;
-    background-color: #F6F7F9;
-    border: none;
-    align-items: center;
-    gap: 12.18px;
-    cursor: pointer;
-    font-family: 'Graphik';
-    font-weight: 500;
-    font-size: 14px;
-    color: #4B5563;
+@media (max-width: 320px) {
+    .button {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        border-radius: 41px;
+        height: 36px;
+        background-color: #F6F7F9;
+        border: none;
+        align-items: center;
+        gap: 12.18px;
+        cursor: pointer;
+        font-family: 'Graphik';
+        font-weight: 500;
+        font-size: 14px;
+        color: #4B5563;
+    }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+    .button {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        border-radius: 41px;
+        height: 36px;
+        background-color: #F6F7F9;
+        border: none;
+        align-items: center;
+        gap: 12.18px;
+        cursor: pointer;
+        font-family: 'Graphik';
+        font-weight: 500;
+        font-size: 14px;
+        color: #4B5563;
+    }
+}
+@media (min-width: 481px) and (max-width: 720px) {
+    .button {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        border-radius: 41px;
+        height: 36px;
+        background-color: #F6F7F9;
+        border: none;
+        align-items: center;
+        gap: 12.18px;
+        cursor: pointer;
+        font-family: 'Graphik';
+        font-weight: 500;
+        font-size: 14px;
+        color: #4B5563;
+    }
+}
+
+@media (min-width: 721px) and (max-width: 1024px) {
+    .button {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        border-radius: 41px;
+        height: 36px;
+        background-color: #F6F7F9;
+        border: none;
+        align-items: center;
+        gap: 12.18px;
+        cursor: pointer;
+        font-family: 'Graphik';
+        font-weight: 500;
+        font-size: 14px;
+        color: #4B5563;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+    .button {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        border-radius: 41px;
+        height: 36px;
+        background-color: #F6F7F9;
+        border: none;
+        align-items: center;
+        gap: 12.18px;
+        cursor: pointer;
+        font-family: 'Graphik';
+        font-weight: 500;
+        font-size: 14px;
+        color: #4B5563;
+    }
+}
+
+@media (min-width: 1200px) {
+    .button {
+        display: flex;
+        width: 360px;
+        justify-content: center;
+        border-radius: 41px;
+        height: 44px;
+        background-color: #F6F7F9;
+        border: none;
+        align-items: center;
+        gap: 12.18px;
+        cursor: pointer;
+        font-family: 'Graphik';
+        font-weight: 500;
+        font-size: 14px;
+        color: #4B5563;
+    }
 }

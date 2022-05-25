@@ -25,7 +25,7 @@ const Signin = () => {
 
    
     return (
-        <div className='signupcontainer'>
+        <div className='signincontainer'>
             <main className='main'>
                 <Header 
                     text='Welcome back!'
@@ -41,7 +41,7 @@ const Signin = () => {
                     </Link>
 
                     <div className='borderline'>
-                        <div className="line"></div>
+                        <div className="line line2"></div>
                         <p className='divider'>or</p>
                         <div className="line"></div>
                     </div>
@@ -87,11 +87,11 @@ const Signin = () => {
                         />
                     </form>
                 
-                <div className='pageLink'>
-                  <Link to='/' className='nav'>
-                    <h4 className='signinlink'>New to Arise?</h4><span className='span'>Create an account</span>
-                  </Link>
-                </div>
+                    <div className='pageLink'>
+                    <Link to='/' className='nav'>
+                        <h4 className='signinlink'>New to Arise?</h4><span className='span'>Create an account</span>
+                    </Link>
+                    </div>
                 </div>
             </main>
         </div>
