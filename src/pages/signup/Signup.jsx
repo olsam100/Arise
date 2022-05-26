@@ -7,6 +7,7 @@ import SocialButton from '../../components/socialButton/SocialButton';
 import google from '../../images/GoogleIcon.svg';
 import { Link } from 'react-router-dom';
 import Header from '../../components/header/Header';
+import BottomMessage from '../../components/bottomMessageGroup/BottomMessage';
 
 
 const Signup = () => {
@@ -59,12 +60,11 @@ const Signup = () => {
 
                     </form>
 
-                 
-                <div className='pageLink'>
-                  <Link to='/signin' className='nav'>
-                    <h4 className='signinlink'>Already have an account?</h4> <span className='span'>Log in</span>
-                  </Link>
-                </div>
+                    <BottomMessage 
+                        link='/signin'
+                        text='Already have an account?'
+                        span='Log in'
+                    />
                 </div>
                 
             </main>

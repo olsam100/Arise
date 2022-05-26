@@ -3,13 +3,29 @@
     font-family: 'Graphik';
     font-weight: 500;
     color: #1C64F2;
-    margin-top: 20px;
+    margin-top: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
 
+    .forgotlink {
+        color: #1C64F2;
+
+        &:visited:active {
+            color: #1C64F2;
+        }
+    }
+    
+
+    
+
     .link {
         cursor: pointer;
         text-decoration: none;
+        // outline-color: 1px solid #8ECAFE;
+
+        &:visited:active {
+            color: #0000ee;
+        }
     }
 }

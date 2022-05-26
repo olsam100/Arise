@@ -33,6 +33,12 @@
             font-weight: 400;
             color: #4B5563;
             margin-top: 8px;
+
+            &:focus {
+                outline: none;
+                border: 1px solid red;
+                // border: 1px solid #8ECAFE;
+            }
         } 
             label {
                 line-height: 18px;
@@ -232,7 +238,7 @@
     }
 }
 
-.bigcontainer {
+.bigcontainer, .passwordfield {
     height: 62px;
     margin: 20px 0 16px 0;
 

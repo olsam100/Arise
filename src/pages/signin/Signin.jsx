@@ -6,23 +6,56 @@ import google from '../../images/GoogleIcon.svg';
 import FieldB from '../../components/formfield/FieldB';
 import Button from '../../components/button/Button';
 import { useForm } from "react-hook-form";
-import err from '../../images/errorIcon.svg'
+import errorIcon from '../../images/errorIcon.svg';
 import { useState } from 'react';
+import BottomMessage from '../../components/bottomMessageGroup/BottomMessage';
+import PasswordField from '../../components/formfield/PasswordField';
 
 const Signin = () => {
 
-    const [icon, setIcon] = useState(!err)
 
-    const errIcon = () => {
-        setIcon(err)
+    const [values, setValues] = useState({one: 'email', two: 'password'});
+    const [error, setError] = useState('');
+    const [showIcon, setShowIcon] = useState(<img src={errorIcon} alt='Error icon'/>)
+
+    const handleIcon = () => {
+        setShowIcon(!showIcon)
     }
-   
 
     const { register, handleSubmit, formState: { errors } } = useForm();
+
     const onSubmit = (data) => {
         console.log(data);
     }
 
+    const handleError = () => {
+        setError(error)
+    }
+    const validator = () => {
+        const emailPattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/;
+        if ((values.one) === '' && (values.two) === '') {
+            return (
+                {
+                    field_one: <div><p>Email cannot be empty</p></div>,
+                    field_two: <div><p>Password cannot be empty</p></div>
+                }
+            )
+        }
+        if ((values.one).match(emailPattern) && (values.two).match(passwordPattern)) {
+            return (
+                {
+                    field_one: '',
+                    field_two: ''
+                }
+            )
+        }
+    }
+
+    const handleFormSubmit = async (e) => {
+        e.preventDefault();
+        validator();
+    } 
    
     return (
         <div className='signincontainer'>
@@ -45,11 +78,11 @@ const Signin = () => {
                         <p className='divider'>or</p>
                         <div className="line"></div>
                     </div>
-
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <FieldB 
                             label='Email Address'
                             name='email'
+                            type='email'
                             required
                             {...register("email",
                                 {
@@ -59,39 +92,37 @@ const Signin = () => {
                             }
                         />
                         {errors.email && <p className='emailerror'>Enter a valid email</p>}
-                        
+                        <div>{}</div>
                       
-                       
-                        <FieldB 
-                            label='Password'
-                            type='password'
-                            name='password'
-                            required
-                            {...register("password", {
-                                required: true,
-                                pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/
-                            })}  
-                        />
-                        <span>{icon}</span>
+                       <div className='passwordcontainer'>
+                           <label htmlFor="password" className='passwordlabel'>Password</label>
+                            <PasswordField 
+                                className='passwordwithicon'
+                                {...register("password", {
+                                    required: true,
+                                    pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/
+                                })}  
+                            />
+                            <span className='inputicon'>{showIcon}</span>
+                        </div>
                         {errors.password && <p className='passworderror'>This is an error message.</p> }
                         
                         <div className='forgot__password'>
-                            <Link to='/forgot-password' className='link'> 
-                                <span>Forgot your password?</span>
+                            <Link to='/reset-password' className='link'> 
+                                <span className='forgotlink'>Forgot your password?</span>
                             </Link>
                         </div>
                       
                         <Button 
                             text='Log in'
-                            onClick={errors.password && errIcon}
                         />
                     </form>
                 
-                    <div className='pageLink'>
-                    <Link to='/' className='nav'>
-                        <h4 className='signinlink'>New to Arise?</h4><span className='span'>Create an account</span>
-                    </Link>
-                    </div>
+                    <BottomMessage 
+                        link='/'
+                        text='New to Arise?'
+                        span='Create an account'
+                    />
                 </div>
             </main>
         </div>

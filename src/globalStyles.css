@@ -75,3 +75,8 @@ input {
     border: 1px solid #E2E8F3;
     padding: 3px 12px;
 }
+
+input:focus {
+    outline: none;
+    border: 1px solid #8ECAFE;
+}
