@@ -18,9 +18,9 @@ const Signin = () => {
     // const [error, setError] = useState('');
     const [showIcon, setShowIcon] = useState(<img src={errorIcon} alt='Error icon'/>)
 
-    // const handleIcon = () => {
-    //     setShowIcon(!showIcon)
-    // }
+    const handleIcon = () => {
+        setShowIcon(!showIcon)
+    }
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
@@ -102,6 +102,7 @@ const Signin = () => {
                                     required: true,
                                     pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/
                                 })}  
+                                onChange={handleIcon}
                             />
                             <span className='inputicon'>{showIcon}</span>
                         </div>
