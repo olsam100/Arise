@@ -14,13 +14,13 @@ import PasswordField from '../../components/formfield/PasswordField';
 const Signin = () => {
 
 
-    const [values, setValues] = useState({one: 'email', two: 'password'});
-    const [error, setError] = useState('');
+    // const [values, setValues] = useState({one: 'email', two: 'password'});
+    // const [error, setError] = useState('');
     const [showIcon, setShowIcon] = useState(<img src={errorIcon} alt='Error icon'/>)
 
-    const handleIcon = () => {
-        setShowIcon(!showIcon)
-    }
+    // const handleIcon = () => {
+    //     setShowIcon(!showIcon)
+    // }
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
@@ -28,34 +28,34 @@ const Signin = () => {
         console.log(data);
     }
 
-    const handleError = () => {
-        setError(error)
-    }
-    const validator = () => {
-        const emailPattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/;
-        if ((values.one) === '' && (values.two) === '') {
-            return (
-                {
-                    field_one: <div><p>Email cannot be empty</p></div>,
-                    field_two: <div><p>Password cannot be empty</p></div>
-                }
-            )
-        }
-        if ((values.one).match(emailPattern) && (values.two).match(passwordPattern)) {
-            return (
-                {
-                    field_one: '',
-                    field_two: ''
-                }
-            )
-        }
-    }
+    // const handleError = () => {
+    //     setError(error)
+    // }
+    // const validator = () => {
+    //     const emailPattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    //     const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/;
+    //     if ((values.one) === '' && (values.two) === '') {
+    //         return (
+    //             {
+    //                 field_one: <div><p>Email cannot be empty</p></div>,
+    //                 field_two: <div><p>Password cannot be empty</p></div>
+    //             }
+    //         )
+    //     }
+    //     if ((values.one).match(emailPattern) && (values.two).match(passwordPattern)) {
+    //         return (
+    //             {
+    //                 field_one: '',
+    //                 field_two: ''
+    //             }
+    //         )
+    //     }
+    // }
 
-    const handleFormSubmit = async (e) => {
-        e.preventDefault();
-        validator();
-    } 
+    // const handleFormSubmit = async (e) => {
+    //     e.preventDefault();
+    //     validator();
+    // } 
    
     return (
         <div className='signincontainer'>
