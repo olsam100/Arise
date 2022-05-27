@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import google from '../../images/GoogleIcon.svg';
 import FieldB from '../../components/formfield/FieldB';
 import Button from '../../components/button/Button';
-import { useForm } from "react-hook-form";
 import errorIcon from '../../images/errorIcon.svg';
 import { useState } from 'react';
 import BottomMessage from '../../components/bottomMessageGroup/BottomMessage';
@@ -14,27 +13,28 @@ import PasswordField from '../../components/formfield/PasswordField';
 const Signin = () => {
 
 
-    // const [values, setValues] = useState({one: 'email', two: 'password'});
-    // const [error, setError] = useState('');
+    // const [values, setValues] = useState({email: '', password: ''});
+    const [error, setError] = useState(false);
+    const [toggleIcon, setToggleIcon] = useState(false);
+
+    // const toggleError = () => {
+    //     setToggleIcon(!toggleIcon)
+    // }
     const [showIcon, setShowIcon] = useState(<img src={errorIcon} alt='Error icon'/>)
 
     const handleIcon = () => {
         setShowIcon(!showIcon)
     }
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const onSubmit = (data) => {
-        console.log(data);
+
+    const handleError = () => {
+        setError(!error)
     }
-
-    // const handleError = () => {
-    //     setError(error)
-    // }
     // const validator = () => {
     //     const emailPattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     //     const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/;
-    //     if ((values.one) === '' && (values.two) === '') {
+    //     if ((values.email) && (values.password)) {
     //         return (
     //             {
     //                 field_one: <div><p>Email cannot be empty</p></div>,
@@ -42,7 +42,7 @@ const Signin = () => {
     //             }
     //         )
     //     }
-    //     if ((values.one).match(emailPattern) && (values.two).match(passwordPattern)) {
+    //     if ((values.email).test(emailPattern) !== '' && (values.password).test(passwordPattern) !== '') {
     //         return (
     //             {
     //                 field_one: '',
@@ -52,10 +52,11 @@ const Signin = () => {
     //     }
     // }
 
-    // const handleFormSubmit = async (e) => {
-    //     e.preventDefault();
-    //     validator();
-    // } 
+    const handleFormSubmit = async (e) => {
+        e.preventDefault();
+        // validator();
+        handleError()
+    } 
    
     return (
         <div className='signincontainer'>
@@ -78,35 +79,28 @@ const Signin = () => {
                         <p className='divider'>or</p>
                         <div className="line"></div>
                     </div>
-                    <form onSubmit={handleSubmit(onSubmit)}>
+
+                    <form onSubmit={handleFormSubmit}>
                         <FieldB 
                             label='Email Address'
                             name='email'
                             type='email'
                             required
-                            {...register("email",
-                                {
-                                    required: true,
-                                    pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-                                })
-                            }
                         />
-                        {errors.email && <p className='emailerror'>Enter a valid email</p>}
-                        <div>{}</div>
+                        {error ? <p className='emailerror'>Enter a valid email</p> : ''}
+                        
                       
                        <div className='passwordcontainer'>
                            <label htmlFor="password" className='passwordlabel'>Password</label>
                             <PasswordField 
                                 className='passwordwithicon'
-                                {...register("password", {
-                                    required: true,
-                                    pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/
-                                })}  
-                                onChange={handleIcon}
+                               
+                                onChange={toggleIcon}
                             />
-                            <span className='inputicon'>{showIcon}</span>
+                            {error ? <span className='inputicon'>{showIcon}</span> : ''}
+                            {error && <p className='passworderror'>This is an error message.</p>}
                         </div>
-                        {errors.password && <p className='passworderror'>This is an error message.</p> }
+                        
                         
                         <div className='forgot__password'>
                             <Link to='/reset-password' className='link'> 
