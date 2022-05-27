@@ -15,16 +15,8 @@ const Signin = () => {
 
     // const [values, setValues] = useState({email: '', password: ''});
     const [error, setError] = useState(false);
-    const [toggleIcon, setToggleIcon] = useState(false);
 
-    // const toggleError = () => {
-    //     setToggleIcon(!toggleIcon)
-    // }
-    const [showIcon, setShowIcon] = useState(<img src={errorIcon} alt='Error icon'/>)
-
-    const handleIcon = () => {
-        setShowIcon(!showIcon)
-    }
+    const erroricon = <img src={errorIcon} alt='Error icon'/>
 
 
 
@@ -94,10 +86,8 @@ const Signin = () => {
                            <label htmlFor="password" className='passwordlabel'>Password</label>
                             <PasswordField 
                                 className='passwordwithicon'
-                               
-                                onChange={toggleIcon}
                             />
-                            {error ? <span className='inputicon'>{showIcon}</span> : ''}
+                            {error ? <span className='inputicon'>{erroricon}</span> : ''}
                             {error && <p className='passworderror'>This is an error message.</p>}
                         </div>
                         
