@@ -16,8 +16,7 @@ const Signin = () => {
     // const [values, setValues] = useState({email: '', password: ''});
     const [error, setError] = useState(false);
 
-    const erroricon = <img src={errorIcon} alt='Error icon'/>
-
+    const [erroricon] = useState(<img src={errorIcon} alt='Error icon'/>)
 
 
     const handleError = () => {
